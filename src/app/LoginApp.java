@@ -13,15 +13,21 @@ public class LoginApp extends Application {
     public void start(Stage stage) {
         Label labelUsuario = new Label("Usuário");
         TextField campoUsuario = new TextField();
+        campoUsuario.setStyle("-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-border-color: gray; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5;");
         campoUsuario.setPromptText("Digite seu usuário");
+        campoUsuario.setMaxWidth(175);
 
         Label labelSenha = new Label("Senha");
         PasswordField campoSenha = new PasswordField();
+        campoSenha.setStyle("-fx-background-color: #2b2b2b; -fx-text-fill: white; -fx-border-color: gray; -fx-border-width: 1; -fx-border-radius: 5; -fx-background-radius: 5;");
         campoSenha.setPromptText("Digite sua senha");
+        campoSenha.setMaxWidth(175);
 
         Label resultadoLogin = new Label();
 
         Button botaoLogin = new Button("Login");
+        botaoLogin.setMaxWidth(175);
+        botaoLogin.setStyle("-fx-background-color: #2196F3; -fx-text-fill: white; -fx-background-radius: 5; -fx-cursor: hand;");
         botaoLogin.setOnAction(e -> {
             String usuario = campoUsuario.getText();
             String senha = campoSenha.getText();
